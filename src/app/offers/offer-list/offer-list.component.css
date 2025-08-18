@@ -1,0 +1,52 @@
+.offer-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.offer-card {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 350px;
+}
+
+.subtitles {
+  place-self: center;
+}
+
+.offer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.offer-price {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
+  margin-bottom: 12px;
+}
+
+.offer-image {
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.out-of-stock {
+  color: red;
+  font-weight: bold;
+}
+
+.few-left {
+  color: orange;
+  font-weight: 600;
+}
+
+.in-stock {
+  color: green;
+  font-weight: normal;
+}

@@ -1,0 +1,35 @@
+<div class="offer-list">
+  <ng-container *ngIf="offersSignal() as offers; else noOffers">
+    @for (offer of offers; track offer.id)
+    {<mat-card class=" offer-card">
+      <mat-card-header>
+        <mat-card-title>{{ offer.title }}</mat-card-title>
+        <mat-card-subtitle class=" subtitles">Votes: {{ offer.votes }}</mat-card-subtitle>
+      </mat-card-header>
+      <img class="offer-image" mat-card-image [src]="offer.image" alt="{{ offer.title }}" />
+      <mat-card-content class="offer-content">
+        <p><b>Highlights: </b>{{ offer.highlights }}</p>
+        <p class="offer-price">Price: €{{ offer.price }}</p>
+      </mat-card-content>
+      <mat-label [ngClass]="{
+        'out-of-stock': offer.stock === 0,
+        'few-left': offer.stock > 0 && offer.stock < 10,
+       'in-stock': offer.stock >= 10
+       }"> {{
+        offer.stock === 0 ? 'Out of Stock' : offer.stock < 10 ? 'Few Left' : 'In Stock' }}</mat-label>
+          <mat-card-actions>
+            <a mat-button color="primary" [routerLink]="['/offers', offer.id]">
+              View Details
+            </a>
+          </mat-card-actions>
+          <mat-card-actions>
+            <app-vote-buttons (upvote)="upvote(offer.id)" (downvote)="downvote(offer.id)"></app-vote-buttons>
+            <app-buy-button [disabled]="offer.stock < 1" (buy)="addToCart(offer.id)"></app-buy-button>
+          </mat-card-actions>
+    </mat-card>
+    }
+  </ng-container>
+  <ng-template #noOffers>
+    <mat-card>There are no offers to display.</mat-card>
+  </ng-template>
+</div>

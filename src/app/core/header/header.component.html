@@ -1,0 +1,13 @@
+<mat-toolbar class="header" color="primary">
+  <span>Rebuy MVP</span>
+  <div>
+    @if(!isLoggedIn){
+    <button mat-button color="primary" (click)="onLogin()">Login</button>
+    } @else {
+    <button mat-button color="primary" (click)="onLogout()">Logout</button>
+    }
+    <button mat-icon-button>
+      <mat-icon [matBadge]="items.length" matBadgeColor="accent" aria-hidden="false">shopping_cart</mat-icon>
+    </button>
+  </div>
+</mat-toolbar>

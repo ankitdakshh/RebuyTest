@@ -1,0 +1,16 @@
+<mat-card *ngIf="offerSignal() as offer">
+  <mat-card-header>
+    <mat-card-title>{{ offer.title }}</mat-card-title>
+    <mat-card-subtitle>Votes: {{ offer.votes }}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image [src]="offer.image" alt="{{ offer.title }}" />
+  <mat-card-content>
+    <p>{{ offer.description }}</p>
+    <p>Price: €{{ offer.price }}</p>
+  </mat-card-content>
+  <mat-card-actions>
+    <app-vote-buttons (upvote)="upvote()" (downvote)="downvote()"></app-vote-buttons>
+    <app-buy-button [disabled]="offer.stock < 1" (buy)="addToCart(offer.id)"></app-buy-button>
+    <a mat-button [routerLink]="['/']">Back to Offers</a>
+  </mat-card-actions>
+</mat-card>
