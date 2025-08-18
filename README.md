@@ -17,8 +17,13 @@ npm start
 DEMO URL : https://app.screencastify.com/manage/videos/8EcvgtFOlISImznN231l
 
 Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+
 ```
 ## Table of Contents
+
+- wihtout login, only as visitor can look the website and it details but cannot interact.
+
+- once logggged it, can make voting, add to cart and can logout on need and become a visitor.
 
 - Display a list of offers with details including highlights, price, and stock status.
 
@@ -63,5 +68,9 @@ files-
 - model: data model for the application
 - header: header component which can be used in multiple places
 
+Some Ads: This is not realastic build or architecture, some features can stay in real world with design and shared comcepts but individual concept will be changed in real world.
+I created this project to make you understand by speed and understanding of the application flow and work but there will be enhancement to this. please don't assume this will be the exact replica of any live application as some features are there just to make the functionality work. Have a good time Playing around.
+
+```
 
 
