@@ -14,6 +14,8 @@ To start a local development server, run:
 npm start
 ```
 
+DEMO URL : https://app.screencastify.com/manage/videos/8EcvgtFOlISImznN231l
+
 Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
 ```
 ## Table of Contents
