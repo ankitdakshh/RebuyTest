@@ -16,10 +16,50 @@ npm start
 
 Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
 ```
+## Table of Contents
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+- Display a list of offers with details including highlights, price, and stock status.
 
-## Additional Resources
+- Voting system with upvote and downvote functionality that tracks user votes and prevents repeated voting.
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
->>>>>>> 8db9cc6 (initial commit)
+- Reactive state management using Angular Signals for offers data.
+
+- Add offers to cart, purchase them, and persist cart and bought states locally using browser Local Storage.
+
+- Dynamic UI feedback using Angular Material components and snack bars.
+
+- Proper handling of Angular platform checks to ensure Local Storage usage only in browser environments.
+
+- Clean, maintainable, and reusable service architecture following Angular best practices.
+
+
+Features
+- Display a list of offers with details including highlights, price, and stock status.
+- Voting system with upvote and downvote functionality that tracks user votes and prevents repeated voting.
+- Reactive state management using Angular Signals for offers data.
+- Add offers to cart, purchase them, and persist cart and bought states locally using browser Local Storage.
+- Dynamic UI feedback using Angular Material components and snack bars.
+- Proper handling of Angular platform checks to ensure Local Storage usage only in browser environments.
+- Clean, maintainable, and reusable service architecture following Angular best practices.
+
+features to scale:-
+
+- login
+- signup
+- cart
+- payment gateway
+- user profile
+- ngrx if required
+- pagination for server side
+- backend API integration
+
+files-
+
+- offerlist: show the list of sorted offers and have many fields to show and interact with user
+- offerdetails: show details with description and big image, can have multiple images and more information in detail
+- service: shared service and component which can be used in multiple places
+- model: data model for the application
+- header: header component which can be used in multiple places
+
+
+
