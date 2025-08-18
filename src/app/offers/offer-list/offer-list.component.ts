@@ -38,7 +38,7 @@ export class OfferListComponent {
   addToCart(offerId: number) {
     this.offersService.buy(offerId);
     if (localStorage.getItem('isLoggedIn') == 'true') {
-      this.snackBar.open('Upvoted!', '', { duration: 1000 });
+      this.snackBar.open('Added to Cart!', '', { duration: 1000 });
     }
   }
 
